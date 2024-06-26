@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #154194;
+    position: static;
+    
+}
+.header2{
+    background-color: #21b5af;
+    padding: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    position: relative; 
+    z-index: 1000; 
+
+}
+.logo {
+  width: 50%;
+  margin-top: 2%;
+}
+.titulo {
+  display: inline-block;
+  margin-right: 22%;
+  opacity: 0; /* ComeÃ§a com opacidade 0 para animar */
+  animation: fadeIn 1.5s ease-in-out forwards; /* Aplica a animaÃ§ÃĢo fadeIn */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dropdown-menu {
+  z-index: 2000; /* ou qualquer valor maior do que o z-index do .header2 */
+}
+.subheader:hover {
+    color: white;
+}
+.notices {
+    margin-top: 4%;
+}
+.titulo-animated {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-2vh);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .image-container:hover {
+    transform: scale(1.1);
+  }
+
+  .image-container img {
+    width: 101%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .modal.active {
+    display: flex;
+  }
+
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .modal-content img {
+    width: 100%;
+    height: 200%;
+    object-fit: contain;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+  }
+  .border-white {
+    border: 4px solid #ffffff; 
+    padding: -6px;
+}
+.container_notices{
+  width: 60%;
+  height: 200px;
+  gap: 1px;
+  margin-bottom: 4%;
+
+ 
+}
+.container_notices img {
+  width: 10%;
+  height: 122%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid whitesmoke;
+  transition: all ease-out 1s;
+ margin: 0 0 0 2%;
+}
+.container_notices img:hover{
+
+  width: 100%;
+}
+.novidades {
+
+  margin-right: 10%;
+}
